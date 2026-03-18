@@ -128,7 +128,7 @@ FROM EMPLOYEE
 WHERE JOB IN ('CLERK', 'SALESMAN', 'ANALYST')
 AND SAL > 3000;
 ```
-![alt text](image-8.png)
+![alt text](<Screenshot 2026-02-11 181459.png>)
 
 ---
 
