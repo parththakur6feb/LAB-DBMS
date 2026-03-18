@@ -33,11 +33,12 @@ In this experiment:
 
 ### 1. Employees based on joining date
 ```sql
-SELECT *
+SELECT ename
 FROM EMPLOYEE
-WHERE HIREDATE < TO_DATE('30-JUN-1980','DD-MON-YYYY')
-   OR HIREDATE > TO_DATE('31-DEC-1981','DD-MON-YYYY');
+WHERE HIREDATE < '1980-06-30'
+   OR HIREDATE >'1981-12-31';
 ```
+![alt text](<Screenshot 2026-02-11 123950.png>)
 
 
 ---
@@ -48,6 +49,7 @@ SELECT ENAME
 FROM EMPLOYEE
 WHERE ENAME LIKE '_A%';
 ```
+![alt text](<Screenshot 2026-02-11 124117.png>)
 
 ---
 
@@ -57,6 +59,7 @@ SELECT ENAME
 FROM EMPLOYEE
 WHERE LENGTH(ENAME) = 5;
 ```
+![alt text](<Screenshot 2026-02-11 124304.png>)
 
 ---
 
@@ -66,6 +69,7 @@ SELECT ENAME
 FROM EMPLOYEE
 WHERE JOB NOT IN ('SALESMAN', 'CLERK', 'ANALYST');
 ```
+![alt text](<Screenshot 2026-02-11 181459.png>)
 
 ---
 
@@ -75,6 +79,7 @@ SELECT ENAME, (SAL * 12) AS ANNUAL_SALARY
 FROM EMPLOYEE
 ORDER BY ANNUAL_SALARY DESC;
 ```
+![alt text](<Screenshot 2026-02-11 181544.png>)
 
 ---
 
@@ -87,6 +92,7 @@ SELECT ENAME, SAL,
        (SAL + (SAL * 0.15) + (SAL * 0.10) - (SAL * 0.05)) AS TOTAL_SAL
 FROM EMPLOYEE;
 ```
+![alt text](<Screenshot 2026-02-11 182900.png>)
 
 ---
 
@@ -96,6 +102,7 @@ UPDATE EMPLOYEE
 SET SAL = SAL + (SAL * 0.10)
 WHERE COMM IS NULL;
 ```
+![alt text](<Screenshot 2026-02-11 182946.png>)
 
 ---
 
@@ -105,6 +112,7 @@ SELECT ENAME, SAL
 FROM EMPLOYEE
 WHERE (SAL * 1.20) > 3000;
 ```
+![alt text](<Screenshot 2026-02-11 182233.png>)
 
 ---
 
@@ -112,8 +120,9 @@ WHERE (SAL * 1.20) > 3000;
 ```sql
 SELECT ENAME, SAL
 FROM EMPLOYEE
-WHERE SAL >= 100;
+WHERE length(SAL) >= 3;
 ```
+![alt text](<Screenshot 2026-02-11 182315.png>)
 
 ---
 
